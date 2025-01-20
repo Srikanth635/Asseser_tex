@@ -1,0 +1,62 @@
+**Objective**: Read the provided assessment report of the Collaborative
+Research Centre (CRC) proposal. Identify flaws in the proposal based on
+the assessment. For each flaw, describe and explain the issue in detail,
+determine its severity, and prioritize the flaws according to their
+potential for significantly improving the proposal. Provide a
+comprehensive analysis and organize the results into a **LaTeX report**
+with the following specifications:
+- **Font**: 11pt Helvetica.
+- **Page Style**: Full-page margins using the `fullpage` package.
+- **Structure**: Use `\section` and `\subsection` for organization.
+- **Tables**: Summarize the flaws, severity, and priority in a formatted
+table.
+- **Lists**: Use LaTeX's `itemize` environment to elaborate on details.
+
+---
+
+### **Key Tasks**
+
+1. **Identify Flaws**:
+    - Extract flaws or weaknesses mentioned in the assessment report.
+    - Focus on gaps in clarity, structure, research quality,
+inclusivity, sustainability, or any other review criteria.
+
+2. **Describe and Explain Flaws**:
+    - Clearly explain the nature of each flaw.
+    - Provide context for why it is a concern based on CRC guidelines
+and review standards.
+
+3. **Determine Severity**:
+    - Rate the severity of each flaw on a scale (e.g., Minor, Moderate,
+Critical).
+    - Justify the rating based on the impact of the flaw on the overall
+proposal quality.
+
+4. **Prioritize Flaws**:
+    - Assign priorities to the flaws based on their potential to
+substantially improve the proposal if resolved.
+    - Justify the prioritization with evidence or reasoning from the
+assessment report.
+
+5. **Provide Detailed Analysis**:
+    - For each high-priority flaw, give actionable recommendations for
+addressing the issue.
+    - Include references to relevant sections of the assessment report.
+
+---
+
+### **Output Requirements**
+
+1. **Flaw Analysis and Prioritization**:
+    - Use a structured format with sections for each flaw.
+    - Include details such as the flaw description, severity, priority,
+and recommendations.
+
+2. **Summary Table**:
+    - Create a table summarizing flaws, their severity, priority, and
+improvement potential.
+
+3. **LaTeX Report Structure**:
+    - Use `\section` and `\subsection` for headings.
+    - Include a `\tabular` environment for the summary table.
+    - Use bullet points (`itemize`) to detail recommendations.

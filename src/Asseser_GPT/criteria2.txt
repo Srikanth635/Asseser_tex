@@ -1,0 +1,83 @@
+**Objective**: Assess the proposal for the Collaborative Research Centre
+(CRC) initiative focusing on EASE using criteria derived from the
+funding agency's description of CRCs and the review criteria for renewal
+proposals. The report should provide ratings, detailed evaluations, and
+actionable recommendations for improvement. The output must be a **LaTeX
+document** with the following specifications:
+- **Font**: 11pt Helvetica.
+- **Page Style**: Full-page margins using the `fullpage` package.
+- **Sections**: Organized with `\section` and `\subsection` headings.
+- **Tables**: Summarize key findings and ratings in a formatted table.
+- **Lists**: Use LaTeX's `itemize` environment for bullet points to
+present strengths, weaknesses, and recommendations.
+
+---
+
+### **Assessment Criteria**
+
+Evaluate the proposal based on these criteria, derived from CRC
+guidelines and review standards:
+
+1. **Research Quality and Impact**:
+    - Does the proposal address a timely, original, and ambitious
+research topic?
+    - Does it demonstrate a high scientific standard with a focus on
+long-term goals and international visibility?
+    - Are preliminary results or past achievements effectively leveraged
+to build credibility?
+
+2. **Interdisciplinary Collaboration and Coherence**:
+    - Is there evidence of meaningful interdisciplinary collaboration?
+    - Are the research projects well-integrated, with clear synergies
+and added value from cooperation across disciplines?
+    - Does the CRC structure (projects, areas, leadership) support
+coherence and collaboration?
+
+3. **Institutional Support and Strategic Role**:
+    - Does the proposal align with the host institution’s strategic
+goals and benefit from strong institutional backing (e.g., resources,
+infrastructure)?
+    - Is there evidence of coordination between participating
+institutions or international collaborations?
+
+4. **Support for Early-Career Researchers**:
+    - Are structured programs and mentorship opportunities in place to
+foster the development of young researchers?
+    - Does the proposal promote academic independence and career growth
+for early-career scientists?
+
+5. **Equality and Inclusion**:
+    - Are measures for promoting diversity, equity, and inclusion
+described and effectively implemented?
+    - Does the proposal outline specific initiatives for gender equality
+or accessibility?
+
+6. **Management and Knowledge Dissemination**:
+    - Are management structures and processes clearly outlined and
+effective in ensuring quality and transparency?
+    - Does the proposal address data management, public outreach, and
+knowledge transfer effectively?
+
+7. **Sustainability and Long-Term Vision**:
+    - Does the CRC demonstrate a compelling long-term vision for its
+research?
+    - Are strategies in place to ensure sustainability (e.g., funding
+continuity, data management plans)?
+    - Does the proposal align research outcomes with societal and
+academic needs?
+
+---
+
+### **Output Requirements**
+
+1. Assign a **numerical rating (1–10)** for each criterion.
+2. Provide **detailed evaluations** for each criterion:
+    - Highlight strengths and weaknesses observed.
+    - Identify areas needing improvement or clarification.
+    - Offer actionable recommendations for improvement.
+3. Summarize ratings and key findings in a **LaTeX table**.
+4. Structure the report as a **LaTeX document**:
+    - Use `\section` and `\subsection` for headings.
+    - Include bullet points (`itemize`) for evaluations and recommendations.
+    - Summarize ratings and observations in a formatted table using
+`\tabular`.

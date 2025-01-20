@@ -1,0 +1,11 @@
+langchain==0.3.5
+langchain-community==0.3.3
+langchain-core==0.3.13
+langchain-chroma
+langchain-groq
+langchain-huggingface
+streamlit
+faiss-gpu
+pypdf
+langchain-openai
+PyPDF2
