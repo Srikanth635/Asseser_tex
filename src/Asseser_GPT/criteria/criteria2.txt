@@ -2,16 +2,7 @@
 (CRC) initiative focusing on EASE using criteria derived from the
 funding agency's description of CRCs and the review criteria for renewal
 proposals. The report should provide ratings, detailed evaluations, and
-actionable recommendations for improvement. The output must be a **LaTeX
-document** with the following specifications:
-- **Font**: 11pt Helvetica.
-- **Page Style**: Full-page margins using the `fullpage` package.
-- **Sections**: Organized with `\section` and `\subsection` headings.
-- **Tables**: Summarize key findings and ratings in a formatted table.
-- **Lists**: Use LaTeX's `itemize` environment for bullet points to
-present strengths, weaknesses, and recommendations.
-
----
+actionable recommendations for improvement.
 
 ### **Assessment Criteria**
 
@@ -66,18 +57,14 @@ continuity, data management plans)?
     - Does the proposal align research outcomes with societal and
 academic needs?
 
----
-
 ### **Output Requirements**
 
 1. Assign a **numerical rating (1–10)** for each criterion.
-2. Provide **detailed evaluations** for each criterion:
-    - Highlight strengths and weaknesses observed.
-    - Identify areas needing improvement or clarification.
-    - Offer actionable recommendations for improvement.
+2. Provide **detailed explanations** for each rating, including:
+   - Specific examples of strong and weak writing practices.
+   - Suggestions for improving clarity, tone, or engagement.
 3. Summarize ratings and key findings in a **LaTeX table**.
-4. Structure the report as a **LaTeX document**:
-    - Use `\section` and `\subsection` for headings.
-    - Include bullet points (`itemize`) for evaluations and recommendations.
-    - Summarize ratings and observations in a formatted table using
-`\tabular`.
+4. Write the report as a **LaTeX document** formatted as follows:
+   - Use `\section` and `\subsection` for structure.
+   - Summarize ratings and observations in a formatted table using `\tabular`.
+   - Include bullet points (`itemize`) to list strengths, weaknesses, and recommendations for each criterion.

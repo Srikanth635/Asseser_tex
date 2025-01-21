@@ -1,11 +1,6 @@
-**Objective**: Assess the writing style of the Collaborative Research Centre (CRC) proposal for the EASE project. Evaluate the clarity, coherence, precision, and professional tone of the proposal across key sections. Provide detailed ratings, constructive feedback, and actionable recommendations for improvement. The final output should be formatted as a **LaTeX document** with the following specifications:
-- **Font**: 11pt Helvetica.
-- **Page Style**: Full-page margins using the `fullpage` package.
-- **Sections**: Organize using `\section` and `\subsection` headings.
-- **Tables**: Summarize key findings and ratings in a formatted table.
-- **Lists**: Use `itemize` for bullet points to present strengths, weaknesses, and recommendations.
-
----
+**Objective**: Assess the writing style of the Collaborative Research Centre (CRC) proposal for the EASE project.
+Evaluate the clarity, coherence, precision, and professional tone of the proposal across key sections.
+Provide detailed ratings, constructive feedback, and actionable recommendations for improvement.
 
 ### **Assessment Criteria**
 
@@ -40,3 +35,15 @@ Evaluate the proposal based on these aspects of writing style:
    - Are sentences well-constructed, grammatically correct, and free of typographical errors?
    - Does the formatting enhance readability, with consistent headings, bullet points, and lists?
    - Are visuals, tables, and charts (if applicable) integrated effectively into the narrative?
+
+### **Output Requirements**
+
+1. Assign a **numerical rating (1–10)** for each criterion.
+2. Provide **detailed explanations** for each rating, including:
+   - Specific examples of strong and weak writing practices.
+   - Suggestions for improving clarity, tone, or engagement.
+3. Summarize ratings and key findings in a **LaTeX table**.
+4. Write the report as a **LaTeX document** formatted as follows:
+   - Use `\section` and `\subsection` for structure.
+   - Summarize ratings and observations in a formatted table using `\tabular`.
+   - Include bullet points (`itemize`) to list strengths, weaknesses, and recommendations for each criterion.

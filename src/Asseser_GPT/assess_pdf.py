@@ -1,13 +1,17 @@
 import PyPDF2
 import os
 import dotenv
+import re
 dotenv.load_dotenv()
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import openai
 from openai import OpenAI
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 client = OpenAI(api_key=OPENAI_API_KEY)
-
+model = "gpt-4o"
+root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+pdf_path = os.path.join(root, "files", "report.pdf")
+criteria_path = os.path.join(root, "src", "Asseser_GPT", "criteria")
 
 def extract_text_from_pdf(pdf_path):
     """
@@ -138,7 +142,7 @@ def split_large_text(text_generator, chunk_size=1000, chunk_overlap=100):
         chunks.extend(splitter.split_text(text))
     return chunks
 
-def evaluate_chunks_in_batches(chunks, criteria, batch_size=5):
+def evaluate_chunks_in_batches(chunks, criteria, output_req, batch_size=5):
     """
     Evaluates text chunks in batches to handle large documents.
 
@@ -155,23 +159,13 @@ def evaluate_chunks_in_batches(chunks, criteria, batch_size=5):
         batch = chunks[i:i+batch_size]
         batch_text = "\n\n".join(batch)  # Combine chunks in the batch
         prompt = (
-            f"Asses the following text based on the requirement criteria: \n\n '{criteria}'."
-            f"Text:\n\n{batch_text}"
-            """Output Requirements: 
-                1. Assign a **numerical rating (1–10)** for each criterion.
-                2. Provide **detailed explanations** for each rating, including:
-                   - Specific examples of strong and weak writing practices.
-                   - Suggestions for improving clarity, tone, or engagement.
-                   - Relevant elaborative prompts to enhance the clarity, cohesiveness in the information
-                3. Summarize ratings and key findings in a **LaTeX table**.
-                4. Write the report as a **LaTeX document** formatted as follows:
-                   - Use section and subsection for structure.
-                   - Summarize ratings and observations in a formatted table using tabular`.
-                   - Include bullet points (`itemize`) to list strengths, weaknesses, and recommendations for each criterion."""
-            "OUTPUT only the latex code, no additional comments or explanations are needed"
+            f"Asses the following text based on the requirement objective criteria: \n\n '{criteria}'. \n\n"
+            f"Text:\n\n{batch_text}\n\n"
+            f"Output Requirements: \n\n {output_req}"
+            "Output only the latex code no additional comments or explanations are needed."
         )
         resp = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model=model,
             messages=[
                 {"role": "user",
                  "content": prompt}
@@ -211,7 +205,7 @@ def aggregate_evaluations_with_saving(chunk_evaluations, output_path="intermedia
     print(f"Intermediate results saved to {output_path}")
     return "\n".join(chunk_evaluations)
 
-def evaluate_large_pdf(pdf_path, criteria, output_path="intermediate_results.txt"):
+def evaluate_large_pdf(pdf_path, criteria, output_req, output_path="intermediate_results.txt"):
     """
     Evaluates a large PDF document based on user-defined criteria.
 
@@ -230,20 +224,21 @@ def evaluate_large_pdf(pdf_path, criteria, output_path="intermediate_results.txt
     chunks = split_large_text(text_generator)
 
     # Step 3: Evaluate chunks in batches
-    chunk_evaluations = evaluate_chunks_in_batches(chunks, criteria)
+    chunk_evaluations = evaluate_chunks_in_batches(chunks, criteria, output_req)
 
     # Step 4: Aggregate results and save intermediate outputs
     return aggregate_evaluations_with_saving(chunk_evaluations, output_path)
 
 if __name__ == "__main__":
-    root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    pdf_path = os.path.join(root, "files", "report.pdf")
 
-    criteria_path = os.path.join(root, "src", "Asseser_GPT")
-    file_name = "criteria1.txt"
+    file_name = "criteria2.txt"
 
     with open(os.path.join(criteria_path,file_name), 'r') as f:
         criteria = f.read()
+
+    parts = re.split(r"### \*\*Output Requirements\*\*", criteria)
+    objective_and_tasks = parts[0].strip()
+    output_requirements = parts[1].strip()
 
     build_path = os.path.join(root, "src", "Asseser_GPT", "build", file_name.split(".")[0])
 
@@ -255,5 +250,5 @@ if __name__ == "__main__":
 
     output_path = os.path.join(build_path, "evaluation_results.tex")
 
-    result = evaluate_large_pdf(pdf_path, criteria, output_path=output_path)
+    result = evaluate_large_pdf(pdf_path, objective_and_tasks, output_requirements, output_path=output_path)
     # print(result)

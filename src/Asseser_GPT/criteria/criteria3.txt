@@ -2,17 +2,7 @@
 Research Centre (CRC) proposal. Identify flaws in the proposal based on
 the assessment. For each flaw, describe and explain the issue in detail,
 determine its severity, and prioritize the flaws according to their
-potential for significantly improving the proposal. Provide a
-comprehensive analysis and organize the results into a **LaTeX report**
-with the following specifications:
-- **Font**: 11pt Helvetica.
-- **Page Style**: Full-page margins using the `fullpage` package.
-- **Structure**: Use `\section` and `\subsection` for organization.
-- **Tables**: Summarize the flaws, severity, and priority in a formatted
-table.
-- **Lists**: Use LaTeX's `itemize` environment to elaborate on details.
-
----
+potential for significantly improving the proposal.
 
 ### **Key Tasks**
 
@@ -43,7 +33,6 @@ assessment report.
 addressing the issue.
     - Include references to relevant sections of the assessment report.
 
----
 
 ### **Output Requirements**
 
@@ -55,8 +44,3 @@ and recommendations.
 2. **Summary Table**:
     - Create a table summarizing flaws, their severity, priority, and
 improvement potential.
-
-3. **LaTeX Report Structure**:
-    - Use `\section` and `\subsection` for headings.
-    - Include a `\tabular` environment for the summary table.
-    - Use bullet points (`itemize`) to detail recommendations.

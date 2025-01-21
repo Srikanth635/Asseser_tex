@@ -1,0 +1,6 @@
+Structure the report as a **LaTeX document**:
+- Font: 11pt Helvetica.
+- Page Style: Full-page margins using the fullpage package.
+- Use section and subsection for headings.
+- Include bullet points (`itemize`) for strengths, weaknesses, and recommendations.
+- Summarize ratings and observations in a formatted table using tabular.
