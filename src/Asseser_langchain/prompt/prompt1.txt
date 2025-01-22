@@ -1,0 +1,49 @@
+**Objective**: Assess the writing style of the Collaborative Research Centre (CRC) proposal for the EASE project.
+Evaluate the clarity, coherence, precision, and professional tone of the proposal across key sections.
+Provide detailed ratings, constructive feedback, and actionable recommendations for improvement.
+
+### **Assessment Criteria**
+
+Evaluate the proposal based on these aspects of writing style:
+
+1. **Clarity**:
+   - Are technical concepts and methodologies explained clearly and concisely?
+   - Is the language accessible to an interdisciplinary audience while maintaining technical rigor?
+   - Are acronyms and specialized terms consistently defined and explained?
+
+2. **Precision**:
+   - Does the writing avoid vague or ambiguous statements?
+   - Are objectives, methodologies, and outcomes described with sufficient detail and specificity?
+   - Are claims supported with appropriate data, evidence, or references?
+
+3. **Coherence and Flow**:
+   - Does the document follow a logical sequence of ideas?
+   - Are transitions between sections and subsections smooth and intuitive?
+   - Are repetitive or disjointed elements minimized?
+
+4. **Professional Tone**:
+   - Is the writing formal and consistent with academic and scientific standards?
+   - Does the tone reflect the ambition and significance of the research without overstating claims?
+   - Are any informal phrases or colloquialisms avoided?
+
+5. **Engagement and Persuasiveness**:
+   - Does the proposal capture the reader’s attention with compelling arguments?
+   - Are the societal, scientific, and economic impacts of the research effectively communicated?
+   - Are unique aspects of the research emphasized to distinguish it from similar initiatives?
+
+6. **Grammar, Syntax, and Formatting**:
+   - Are sentences well-constructed, grammatically correct, and free of typographical errors?
+   - Does the formatting enhance readability, with consistent headings, bullet points, and lists?
+   - Are visuals, tables, and charts (if applicable) integrated effectively into the narrative?
+
+### **Output Requirements**
+
+1. Assign a **numerical rating (1–10)** for each criterion.
+2. Provide **detailed explanations** for each rating, including:
+   - Specific examples of strong and weak writing practices.
+   - Suggestions for improving clarity, tone, or engagement.
+3. Summarize ratings and key findings in a **LaTeX table**.
+4. Write the report as a **LaTeX document** formatted as follows:
+   - Use `\section` and `\subsection` for structure.
+   - Summarize ratings and observations in a formatted table using `\tabular`.
+   - Include bullet points (`itemize`) to list strengths, weaknesses, and recommendations for each criterion.
